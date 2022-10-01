@@ -66,3 +66,10 @@ section.tournament p {
 	margin: 0rem;
 }
 
+table {
+	border: 1px solid #000;
+	}
+table td {
+	padding: 1rem;
+	border: 1px solid #000;
+}
