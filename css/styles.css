@@ -7,6 +7,10 @@
  :root {
  	--stk-primary: #151515;
  	--stk-secondary: #301B3F;
+ 	--stk-blue: #3C415C;
+ 	--stk-light-purple: #B4A5A5;
+ 	--stk-text-color: #FFFFFF;
+
  }
 
 /* Core Elements */
@@ -45,31 +49,162 @@ nav ul li {
 	margin-left: 2rem;
 }
 
+@media screen and (max-width: 900px){
+	nav ul {
+		flex-direction: column;	
+	}
+}
+
 section.tournament {
 	width: 100vw;
 	height: 100vh;
-	background: #000;
+	background: linear-gradient(var(--stk-primary), rgba(21, 21, 21, 0.50)), url("../images/mango-axe-tournament.jpeg");
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	color: #fff;
 }
+
 
 section.tournament h1 {
 	font-size: 12rem;
 	margin: 0px;
 }
 
+
+@media screen and (max-width: 900px) {
+	section.tournament {
+		height: 55rem;
+	}
+
+	section.tournament h1 {
+		margin-top: 6.2rem;
+		font-size: 3rem; 
+	}
+
+	section.tournament p {
+		font-size: 1rem;
+	}
+}
+
 section.tournament p {
 	font-size: 3rem;
 	margin: 0rem;
+	color: var(--stk-light-purple);
 }
 
-table {
-	border: 1px solid #000;
+/*Team*/ 
+
+section.team h2 {
+	margin-left: 2rem;
+	font-size: 6rem;
+	margin-top: 1rem;
+	color: var(--stk-text-color);
+}
+
+section.team p {
+	font-size: 2.5rem;
+	align-items: center;
+	margin-left: 2rem;
+	color: var(--stk-text-color);
+}
+
+section.team  {
+	width: 100vw;
+	height: 50vh;
+	margin-top: 0rem;
+	background: var(--stk-secondary);
+	padding: 0.1rem;
+}
+
+@media screen and (max-width: 900px){
+	section.team h2 {
+		font-size: 1.5rem;
+		width: 15vw;
+		height: 10vh;
 	}
-table td {
-	padding: 1rem;
-	border: 1px solid #000;
+	section.team p {
+		font-size: 1rem;
+		margin-top: 0.5rem;
+		margin-left: 0.5rem;
+	}
+}
+
+/* Support */ 
+
+section.support {
+	background-size: cover;
+	width: 100vw;
+	height: 50vh;
+	background: var(--stk-light-purple);
+	padding: 0.1rem;
+}
+
+section.support h3 {
+
+	margin-left: 2rem;
+	font-size: 6rem;
+	margin-top: 1rem;
+	color: var(--stk-text-color);
+}
+
+section.support p {
+	margin-left: 2rem;
+	font-size: 2.5rem;
+	margin-top: 1rem;
+	color: var(--stk-text-color);
+}
+
+
+@media screen and (max-width: 900px){
+	section.support h3 {
+		font-size: 1.5rem;
+		width: 15vw;
+		height: 10vh;
+	}
+	section.support p {
+		font-size: 1rem;
+		margin-top: 0.5rem;
+		margin-left: 0.5rem;
+	}
+}
+
+/*table*/
+
+section.table {
+	background: var(--stk-primary);
+	padding: 0.1rem;
+}
+
+section.table h2 {
+	margin-left: 1rem;
+	padding: 0.1rem;
+	background: var(--stk-primary);
+	color: var(--stk-text-color);
+}
+
+
+
+iframe {
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+	margin-left: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+
+/*footer*/
+footer {
+	padding: 0.1rem;
+	background: var(--stk-secondary);
+}
+footer h2 {
+	margin-left: 4rem;
+	color: var(--stk-text-color);
 }
